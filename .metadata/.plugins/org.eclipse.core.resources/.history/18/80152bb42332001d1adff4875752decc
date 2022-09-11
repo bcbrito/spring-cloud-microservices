@@ -1,0 +1,8 @@
+package br.com.bcbrito.microservice.loja.controller.dto;
+
+import java.util.List;
+
+public class CompraDTO {
+
+	private List<ItemDaCompra> itens;
+}

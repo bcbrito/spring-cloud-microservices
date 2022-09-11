@@ -1,0 +1,7 @@
+package br.com.bcbrito.microservice.loja.controller.dto;
+
+public class ItemDaCompraDTO {
+	private long id;
+	private int quantidade;
+	
+}

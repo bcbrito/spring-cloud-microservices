@@ -1,0 +1,5 @@
+package br.com.bcbrito.microservice.loja.controller;
+
+public class CompraController {
+
+}
