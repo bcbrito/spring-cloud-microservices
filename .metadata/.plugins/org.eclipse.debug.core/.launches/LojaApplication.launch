@@ -11,4 +11,5 @@
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="br.com.bcbrito.microservice.loja.LojaApplication"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value=""/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="loja"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
 </launchConfiguration>
