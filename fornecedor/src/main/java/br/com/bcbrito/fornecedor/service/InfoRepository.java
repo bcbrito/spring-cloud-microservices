@@ -7,5 +7,7 @@ import br.com.bcbrito.fornecedor.model.InfoFornecedor;
 
 @Repository
 public interface InfoRepository extends CrudRepository<InfoFornecedor, Long> {
+	
+	InfoFornecedor findByEstado(String estado);
 
 }
