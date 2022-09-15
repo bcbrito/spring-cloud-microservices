@@ -40,6 +40,6 @@ Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distrib
 
 O que muda na nossa aplicação através do uso do Service Discovery?
 
-    Nas requisições REST que implementamos, passamos apenas o nome da outra aplicação. O Spring substitui automaticamente o nome pelo IP. Os microsserviços não         precisam conhecer o endereço IP das outras aplicações, mas apenas o nome que elas se registraram no Eureka.
+Nas requisições REST que implementamos, passamos apenas o nome da outra aplicação. O Spring substitui automaticamente o nome pelo IP. Os microsserviços não         precisam conhecer o endereço IP das outras aplicações, mas apenas o nome que elas se registraram no Eureka.
 
 Referência: https://cursos.alura.com.br/course/microservices-spring-cloud-service-registry-config-server
