@@ -2,6 +2,8 @@ server:
   port: 8081
   
 spring:
+  application:
+    name: 'fornecedor'
   datasource:
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -10,3 +12,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+      
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
