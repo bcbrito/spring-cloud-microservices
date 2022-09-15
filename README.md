@@ -25,7 +25,7 @@ Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distrib
 - O uso do **Postman** como cliente HTTP
 - A criação do microsserviço `Loja` usando **Spring Boot**
 
-### 3- Service Registry com Eureka ?
+### 3- Service Registry com Eureka \o/
 
 - A integração entre microsserviços com RestTemplate
     - O RestTemplate do Spring permite chamadas HTTP de alto nível
