@@ -25,5 +25,21 @@ Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distrib
 - O uso do **Postman** como cliente HTTP
 - A criação do microsserviço `Loja` usando **Spring Boot**
 
+### 3- Service Registry com Eureka \o/
+
+- A integração entre microsserviços com RestTemplate
+    - O RestTemplate do Spring permite chamadas HTTP de alto nível
+- Um introdução ao Service discovery e Service registry
+    - Service registry é um servidor central, onde todos os microsserviços ficam cadastrados (nome e IP/porta)
+    - Service discovery é um mecanismo de descoberta do IP do microsserviço pelo nome
+    - Dessa forma, nenhum microsserviço fica acoplado ao outro pelo IP/porta
+
+- A implementação do service registry através do Eureka Server
+- Como registrar da Loja e do Fornecedor no Eureka Server
+- A resolução do IP/porta através do nome do microsserviço nas requisições
+
+O que muda na nossa aplicação através do uso do Service Discovery?
+
+Nas requisições REST que implementamos, passamos apenas o nome da outra aplicação. O Spring substitui automaticamente o nome pelo IP. Os microsserviços não         precisam conhecer o endereço IP das outras aplicações, mas apenas o nome que elas se registraram no Eureka.
 
 Referência: https://cursos.alura.com.br/course/microservices-spring-cloud-service-registry-config-server
