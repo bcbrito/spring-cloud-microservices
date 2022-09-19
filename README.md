@@ -40,8 +40,17 @@ Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distrib
 
 - O que muda na nossa aplicação através do uso do Service Discovery?
     - Nas requisições REST que implementamos, passamos apenas o nome da outra aplicação. O Spring substitui automaticamente o nome pelo IP. Os microsserviços não         precisam conhecer o endereço IP das outras aplicações, mas apenas o nome que elas se registraram no Eureka.
-- Temos algumas tecnologias trabalhando em conjunto para prover a funcionalidade de Load Balancing. Como elas estão integradas?
 
+# **### 4 - Spring Config Server**
+
+> Que um servidor de configuração é o lugar central para definir as configurações dos serviços
+Que todas as configurações dos microsserviços devem ficar externalizadas e centralizadas
+Que o Spring Config Server é uma implementação do servidor do projeto Spring Cloud
+Sobre a integração dos microsserviços com o servidor de configuração
+Para tal, devemos configurar o nome do microsserviço, profile e URL do Config Server
+Que existem várias formas de definir um repositório de configurações, entre elas o GitHub
+
+- Temos algumas tecnologias trabalhando em conjunto para prover a funcionalidade de Load Balancing. Como elas estão integradas?
 - Era muito comum que o tamanho do ambiente de produção fosse estável e sempre pronto para atender uma determinada demanda conhecida. O que difere, nas aplicações de microsserviços, que gera a necessidade de uma configuração automatizada?
  - Os microsserviços são preparados para um ambiente (cloud), cuja precificação é diretamente relacionada à quantidade de máquinas e ao uso de seus recursos de infraestrutura. Para reduzir esse custo, aplicações de microsserviços se encaixam bem, pois é possível escalar automaticamente, de acordo com a demanda, e em questão de segundos, pedaços do que antes era uma única aplicação. Nesse cenário, configurar manualmente os servidores com as configurações necessárias para cada aplicação é impraticável.
 
