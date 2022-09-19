@@ -38,8 +38,15 @@ Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distrib
 - Como registrar da Loja e do Fornecedor no Eureka Server
 - A resolução do IP/porta através do nome do microsserviço nas requisições
 
-O que muda na nossa aplicação através do uso do Service Discovery?
+- O que muda na nossa aplicação através do uso do Service Discovery?
+    - Nas requisições REST que implementamos, passamos apenas o nome da outra aplicação. O Spring substitui automaticamente o nome pelo IP. Os microsserviços não         precisam conhecer o endereço IP das outras aplicações, mas apenas o nome que elas se registraram no Eureka.
+- Temos algumas tecnologias trabalhando em conjunto para prover a funcionalidade de Load Balancing. Como elas estão integradas?
 
-Nas requisições REST que implementamos, passamos apenas o nome da outra aplicação. O Spring substitui automaticamente o nome pelo IP. Os microsserviços não         precisam conhecer o endereço IP das outras aplicações, mas apenas o nome que elas se registraram no Eureka.
+- Era muito comum que o tamanho do ambiente de produção fosse estável e sempre pronto para atender uma determinada demanda conhecida. O que difere, nas aplicações de microsserviços, que gera a necessidade de uma configuração automatizada?
+ - Os microsserviços são preparados para um ambiente (cloud), cuja precificação é diretamente relacionada à quantidade de máquinas e ao uso de seus recursos de infraestrutura. Para reduzir esse custo, aplicações de microsserviços se encaixam bem, pois é possível escalar automaticamente, de acordo com a demanda, e em questão de segundos, pedaços do que antes era uma única aplicação. Nesse cenário, configurar manualmente os servidores com as configurações necessárias para cada aplicação é impraticável.
+
+- A necessidade de separar as configurações em arquivos diferentes não serve apenas para uma organização melhor, mas, no caso do Spring, para que certas configurações estejam disponíveis em momentos diferentes.
+    - Por que foi necessário separar a configuração do spring-config em outro arquivo (bootstrap.yml)?
+        - O arquivo bootstrap.yml é carregado em um contexto com maior precedência, chamado de Bootstrap Application Context. É neste contexto que o Spring Cloud Config Client se conecta ao configuration server, baixa e disponibiliza as variáveis de ambiente para o Spring Application Context, que é o contexto da nossa aplicação.
 
 Referência: https://cursos.alura.com.br/course/microservices-spring-cloud-service-registry-config-server
