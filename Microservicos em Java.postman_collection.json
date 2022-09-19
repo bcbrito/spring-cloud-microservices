@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "1afd7ff5-6610-4335-8580-cb426652dbfa",
+		"name": "Microservicos em Java",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Loja - Compra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itens\" : [\r\n        {\r\n            \"id\":1,\r\n            \"quantidade\":5\r\n        },\r\n        { \r\n            \"id\":2,\r\n            \"quantidade\":1\r\n        }\r\n    ],\r\n    \"endereco\":{\r\n        \"rua\": \"Shoichi Masuda\",\r\n        \"numero\": 100,\r\n        \"estado\":\"GO\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fornecedor - Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/info/GO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"info",
+						"GO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eureka-server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8761/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8761",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
