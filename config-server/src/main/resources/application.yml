@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: C:\microservices-repo
+server:
+  port: 8888

@@ -6,9 +6,9 @@ spring:
     name: 'fornecedor'
   datasource:
     password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.mariadb.jdbc.Driver
     username: root
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/fornecedor
+    url: jdbc:mariadb://localhost:3306/fornecedor
   jpa:
     hibernate:
       ddl-auto: update
