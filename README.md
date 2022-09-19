@@ -59,3 +59,6 @@ Que existem várias formas de definir um repositório de configurações, entre 
         - O arquivo bootstrap.yml é carregado em um contexto com maior precedência, chamado de Bootstrap Application Context. É neste contexto que o Spring Cloud Config Client se conecta ao configuration server, baixa e disponibiliza as variáveis de ambiente para o Spring Application Context, que é o contexto da nossa aplicação.
 
 Referência: https://cursos.alura.com.br/course/microservices-spring-cloud-service-registry-config-server
+
+### 5 - Load Balancer e Spring Feign
+
