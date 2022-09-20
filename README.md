@@ -43,22 +43,29 @@ Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distrib
 
 ### 4 - Spring Config Server
 
-> Que um servidor de configuração é o lugar central para definir as configurações dos serviços
-Que todas as configurações dos microsserviços devem ficar externalizadas e centralizadas
-Que o Spring Config Server é uma implementação do servidor do projeto Spring Cloud
-Sobre a integração dos microsserviços com o servidor de configuração
-Para tal, devemos configurar o nome do microsserviço, profile e URL do Config Server
-Que existem várias formas de definir um repositório de configurações, entre elas o GitHub
+- Que um servidor de configuração é o lugar central para definir as configurações dos serviços
+- Que todas as configurações dos microsserviços devem ficar externalizadas e centralizadas
+- Que o Spring Config Server é uma implementação do servidor do projeto Spring Cloud
+- Sobre a integração dos microsserviços com o servidor de configuração
+- Para tal, devemos configurar o nome do microsserviço, profile e URL do Config Server
+- Que existem várias formas de definir um repositório de configurações, entre elas o GitHub
 
 - Temos algumas tecnologias trabalhando em conjunto para prover a funcionalidade de Load Balancing. Como elas estão integradas?
+
 - Era muito comum que o tamanho do ambiente de produção fosse estável e sempre pronto para atender uma determinada demanda conhecida. O que difere, nas aplicações de microsserviços, que gera a necessidade de uma configuração automatizada?
- - Os microsserviços são preparados para um ambiente (cloud), cuja precificação é diretamente relacionada à quantidade de máquinas e ao uso de seus recursos de infraestrutura. Para reduzir esse custo, aplicações de microsserviços se encaixam bem, pois é possível escalar automaticamente, de acordo com a demanda, e em questão de segundos, pedaços do que antes era uma única aplicação. Nesse cenário, configurar manualmente os servidores com as configurações necessárias para cada aplicação é impraticável.
+
+- Os microsserviços são preparados para um ambiente (cloud), cuja precificação é diretamente relacionada à quantidade de máquinas e ao uso de seus recursos de infraestrutura. Para reduzir esse custo, aplicações de microsserviços se encaixam bem, pois é possível escalar automaticamente, de acordo com a demanda, e em questão de segundos, pedaços do que antes era uma única aplicação. Nesse cenário, configurar manualmente os servidores com as configurações necessárias para cada aplicação é impraticável.
 
 - A necessidade de separar as configurações em arquivos diferentes não serve apenas para uma organização melhor, mas, no caso do Spring, para que certas configurações estejam disponíveis em momentos diferentes.
-    - Por que foi necessário separar a configuração do spring-config em outro arquivo (bootstrap.yml)?
-        - O arquivo bootstrap.yml é carregado em um contexto com maior precedência, chamado de Bootstrap Application Context. É neste contexto que o Spring Cloud Config Client se conecta ao configuration server, baixa e disponibiliza as variáveis de ambiente para o Spring Application Context, que é o contexto da nossa aplicação.
+
+- O arquivo bootstrap.yml é carregado em um contexto com maior precedência, chamado de Bootstrap Application Context. É neste contexto que o Spring Cloud Config Client se conecta ao configuration server, baixa e disponibiliza as variáveis de ambiente para o Spring Application Context, que é o contexto da nossa aplicação.
 
 ### 5 - Load Balancer e Spring Feign
+    
+- Load Balancing é o processo de distribuir as requisições vindas dos usuários para as várias instâncias disponíveis. Como funciona o Client Side Load Balancing que estamos utilizando nas requisições da loja?
+    
+    - De fato, a cada requisição, o Ribbon rotaciona para uma instância diferente. Todavia, é possível customizar o algoritmo de load balancing, como pode ser visto na documentação.
+
 
 
 Referência: https://cursos.alura.com.br/course/microservices-spring-cloud-service-registry-config-server
