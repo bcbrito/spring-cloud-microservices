@@ -1,4 +1,4 @@
-package br.com.bcbrito.fornecedor.model;
+package br.com.bcbrito.microservice.fornecedor.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

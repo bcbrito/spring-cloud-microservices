@@ -1,4 +1,4 @@
-package br.com.bcbrito.fornecedor;
+package br.com.bcbrito.microservice.fornecedor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

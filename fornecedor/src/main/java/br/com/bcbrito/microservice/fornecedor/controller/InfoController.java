@@ -1,12 +1,12 @@
-package br.com.bcbrito.fornecedor.controller;
+package br.com.bcbrito.microservice.fornecedor.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.bcbrito.fornecedor.model.InfoFornecedor;
-import br.com.bcbrito.fornecedor.service.InfoService;
+import br.com.bcbrito.microservice.fornecedor.model.InfoFornecedor;
+import br.com.bcbrito.microservice.fornecedor.service.InfoService;
 
 @RestController
 @RequestMapping("/info")

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.bcbrito.microservice.loja.controller.dto.CompraDTO;
+import br.com.bcbrito.microservice.loja.dto.CompraDTO;
 import br.com.bcbrito.microservice.loja.service.CompraService;
 
 @RestController

@@ -1,4 +1,4 @@
-package br.com.bcbrito.config;
+package br.com.bcbrito.microservice.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

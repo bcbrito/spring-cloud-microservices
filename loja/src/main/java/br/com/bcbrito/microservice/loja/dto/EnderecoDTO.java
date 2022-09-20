@@ -1,4 +1,4 @@
-package br.com.bcbrito.microservice.loja.controller.dto;
+package br.com.bcbrito.microservice.loja.dto;
 
 public class EnderecoDTO {
 	
