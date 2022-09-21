@@ -84,6 +84,22 @@ Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distrib
 - O que ganhamos com agregação de logs e a geração de ID de correlação?
     - Além da facilidade de acessar em um único local todo o log gerado pela aplicação, temos também a possibilidade de filtrar os logs em uma única transação. Com isso, através da formatação adequada do log, sabemos não só onde os erros foram gerados, mas em que momento aconteceu, pois os logs são escritos com os dados de milissegundos logo no início da linha. É exatamente esse o ponto. Precisamos não apenas acessar os logs, mas tê-los contextualizados com os outros logs gerados na mesma transação.
 
+- Como se trata de uma arquitetura distribuída, temos logs distribuídos
+    - Ou seja, cada microsserviço (e instância dele) possui o seu log
+    - Isso dificulta o acompanhamento e **rastreabilidade das requisiçõe**s
+
+- Para unificar os logs, precisamos de **agregadores de log**
+    - Como implementação de um agregador, usamos o **Papertrail**, um agregador como serviço
+
+- Usamos a biblioteca **Logback** para gerar e enviar os logs ao agregador
+    - O **Logback** possui um appender, que possibilita o envio dos logs
+
+- Para acompanhar uma transação nos logs, usamos uma **correlation-id**
+    - A correltation-id é um identificador da transação, que é passada de requisição pra requisição
+    - Dessa forma, podemos entender quais requisições fazem parte da mesma transação
+
+- A biblioteca **Spring Sleuth**, que é usada para gerar a correlation-id
+
 Referência: https://cursos.alura.com.br/course/microservices-spring-cloud-service-registry-config-server
 
 
