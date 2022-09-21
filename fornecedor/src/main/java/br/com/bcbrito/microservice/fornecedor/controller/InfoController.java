@@ -11,12 +11,12 @@ import br.com.bcbrito.microservice.fornecedor.service.InfoService;
 @RestController
 @RequestMapping("/info")
 public class InfoController {
-
+	
 	@Autowired
-	private InfoService infoservice;
+	private InfoService infoService;
 	
 	@RequestMapping("/{estado}")
-	public InfoFornecedor GetInfoPorEstado(@PathVariable String estado) {
-		return infoservice.getInfoPorEstado(estado);
+	public InfoFornecedor getInfoPorEstado(@PathVariable String estado) {
+		return infoService.getInfoPorEstado(estado);
 	}
 }

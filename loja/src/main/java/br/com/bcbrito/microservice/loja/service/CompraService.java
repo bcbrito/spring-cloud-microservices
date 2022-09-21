@@ -16,7 +16,7 @@ public class CompraService {
 
 		InfoFornecedorDTO info =  fornecedorClient.getInfoPorEstado(compra.getEndereco().getEstado());
 		
-		System.out.println(info.getEndereço());
+		System.out.println(info.getEndereco());
 	}
 
 }
