@@ -66,7 +66,14 @@ Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distrib
     
     - De fato, a cada requisição, o Ribbon rotaciona para uma instância diferente. Todavia, é possível customizar o algoritmo de load balancing, como pode ser visto na documentação.
 
-
+- Que o Client Side Load Balancing (CSLB) é o cliente HTTP que decide qual microsserviço recebe a requisição
+- Isto é importante, pois pode ter várias instâncias do mesmo serviço no ar
+- A configuração do CSLB é feita a partir da anotação @LoadBalanced, na criação do RestTemplate
+- Como implementação do CSLB, usamos um projeto chamado Ribbon, que faz parte do Spring Cloud Netflix
+- Para descobrir quais clientes existem, podemos injetar a interface DiscoveryClient
+- Como alternativa ao RestTemplate, podemos usar o Spring Feign, que já usa o Ribbon para CSLB
+- O Spring Feign exige apenas uma interface, com a definição e mapeamento dos métodos que executarão a requisição
+- Toda a implementação da interface é gerada pelo Spring Feign
 
 Referência: https://cursos.alura.com.br/course/microservices-spring-cloud-service-registry-config-server
 
