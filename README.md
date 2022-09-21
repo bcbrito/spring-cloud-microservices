@@ -63,7 +63,6 @@ Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distrib
 ### 5 - Load Balancer e Spring Feign
     
 - Load Balancing é o processo de distribuir as requisições vindas dos usuários para as várias instâncias disponíveis. Como funciona o Client Side Load Balancing que estamos utilizando nas requisições da loja?
-    
     - De fato, a cada requisição, o Ribbon rotaciona para uma instância diferente. Todavia, é possível customizar o algoritmo de load balancing, como pode ser visto na documentação.
 
 - Que o Client Side Load Balancing (CSLB) é o cliente HTTP que decide qual microsserviço recebe a requisição
@@ -79,8 +78,11 @@ Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distrib
 ### 6 - Distributed Tracing e Spring Sleuth
 
 - Como a geração dos logs são impactados com a arquitetura em microsserviços?
-- Assim como nos sistemas monolíticos, temos logs separados em máquinas diferentes, mas, apenas nos microsserviços, a lógica de negócio também está quebrada em logs diferentes.
-- Como estamos vendo, uma requisição do usuário bate em várias aplicações diferentes, para que a lógica de negócio requerida seja realizada. Com isso, acompanhar os logs gerados em uma transação não é tão simples quanto abrir um único log e ter toda a informação disponível.
+    - Assim como nos sistemas monolíticos, temos logs separados em máquinas diferentes, mas, apenas nos microsserviços, a lógica de negócio também está quebrada em logs diferentes.
+    - Como estamos vendo, uma requisição do usuário bate em várias aplicações diferentes, para que a lógica de negócio requerida seja realizada. Com isso, acompanhar os logs gerados em uma transação não é tão simples quanto abrir um único log e ter toda a informação disponível.
+
+- O que ganhamos com agregação de logs e a geração de ID de correlação?
+    - Além da facilidade de acessar em um único local todo o log gerado pela aplicação, temos também a possibilidade de filtrar os logs em uma única transação. Com isso, através da formatação adequada do log, sabemos não só onde os erros foram gerados, mas em que momento aconteceu, pois os logs são escritos com os dados de milissegundos logo no início da linha. É exatamente esse o ponto. Precisamos não apenas acessar os logs, mas tê-los contextualizados com os outros logs gerados na mesma transação.
 
 Referência: https://cursos.alura.com.br/course/microservices-spring-cloud-service-registry-config-server
 
