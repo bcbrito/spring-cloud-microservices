@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import br.com.bcbrito.microservice.loja.client.FornecedorClient;
 import br.com.bcbrito.microservice.loja.dto.CompraDTO;
-import br.com.bcbrito.microservice.loja.dto.InfoFornecedorDTO;
 import br.com.bcbrito.microservice.loja.dto.InfoPedidoDTO;
 import br.com.bcbrito.microservice.loja.model.Compra;
 
@@ -24,7 +23,7 @@ public class CompraService {
 		final String estado = compra.getEndereco().getEstado();
 		
 		LOG.info("buscando informações do fornecedor de {}", estado);
-		InfoFornecedorDTO info =  fornecedorClient.getInfoPorEstado(compra.getEndereco().getEstado());
+		fornecedorClient.getInfoPorEstado(compra.getEndereco().getEstado());
 				
 		LOG.info("realizando pedido dos itens");
 		InfoPedidoDTO pedido = fornecedorClient.realizaPedido(compra.getItens());
