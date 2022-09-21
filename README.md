@@ -75,6 +75,13 @@ Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distrib
 - O Spring Feign exige apenas uma interface, com a definição e mapeamento dos métodos que executarão a requisição
 - Toda a implementação da interface é gerada pelo Spring Feign
 
+
+### 6 - Distributed Tracing e Spring Sleuth
+
+- Como a geração dos logs são impactados com a arquitetura em microsserviços?
+- Assim como nos sistemas monolíticos, temos logs separados em máquinas diferentes, mas, apenas nos microsserviços, a lógica de negócio também está quebrada em logs diferentes.
+- Como estamos vendo, uma requisição do usuário bate em várias aplicações diferentes, para que a lógica de negócio requerida seja realizada. Com isso, acompanhar os logs gerados em uma transação não é tão simples quanto abrir um único log e ter toda a informação disponível.
+
 Referência: https://cursos.alura.com.br/course/microservices-spring-cloud-service-registry-config-server
 
 
