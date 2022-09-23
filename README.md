@@ -1,4 +1,4 @@
-# Aprenda comigo Microservices com Spring Cloud: Registry, Config Server e Distributed Tracing
+# Microservices com Spring Cloud: Registry, Config Server e Distributed Tracing
 
 ### 1 - Configurando o Ambiente
 
