@@ -6,5 +6,5 @@ spring:
     config:
       server:
           git:
-            uri: https://github.com/bcbrito/JavaSpringCloud-Repo
+            uri: https://github.com/bcbrito/spring-cloud-microservices-repo.git
             search-paths: fornecedor
